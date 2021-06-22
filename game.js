@@ -18,5 +18,19 @@ var fight = function name(params) {
 
     //ask player if they'd like to fight or run 
     var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "Fight" or "SKIP" to choose. ');
-    
+
+    //if player choses to fight, fight 
+    if(promptFight === 'fight || promptFight === "FIGHT") {
+        // remove enemy's healthy by subtracting the amount set in the player Attack variable 
+        enemyHealth = enemyHealth - playerAttack;
+        console.log(
+            playerName + "Attacked" + enemyName + "." + enemyName + "now has" + enemyHealth + "health remaining.");
+            //check enemy's health 
+            if (enemyHealth <=0) {
+                window.alert(enemyName + "has died!");
+            } else {window.altert(enemyName + "still has" + enemyHealth + "Health left.");
+        }
+            }
+        )
+    }
 }
