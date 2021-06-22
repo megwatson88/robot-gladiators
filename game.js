@@ -28,8 +28,31 @@ var fight = function name(params) {
             //check enemy's health 
             if (enemyHealth <=0) {
                 window.alert(enemyName + "has died!");
-            } else {window.altert(enemyName + "still has" + enemyHealth + "Health left.");
-        }
+            } else {
+                window.altert(enemyName + "still has" + enemyHealth + "Health left.");
+                    //If player choses to skip 
+            }else if (promptFight === "skip"|| promtFight === "SKIP"){
+                //CONFIRM PLAYER WANTS TO SKIP
+                varconfrimSkip = window.confirm ("Are you sure youd like to quit?");
+                //if yes (true), leave fight
+                if (confrimSkip){
+                    window.alert(playerName + "has decided to skip this fight. Goodbye!");
+                    //subtract money from playerMoney for skipping 
+                    playerMoney = playerMoney -2 ;
+                }
+                if no (flase), ask questions again by running fight () again 
+                else {
+                    fight();
+                    //if player did not chose 1 or 2 prompt
+                    else {
+                        window.alert ("You need to pick a valid option. Try again!");
+                    };
+                    // run fight function to start game 
+                    fight();
+                    }
+                }
+                }
+            }
             }
         )
     }
