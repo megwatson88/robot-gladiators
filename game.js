@@ -7,12 +7,30 @@ var playerMoney = 10;
 //You can also log multiple values at once like this 
 consule.log(playerName, playerAttack, playerHealth);
  
-var enemyName = "Roborto";
+var enemyName = ["Roborto", "Amy Andorid", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
 //fight function 
-var fight = function name(params) {
+var fight = function name(enemyName) {
+    while (playerHealth > 0 && enemyHealth > 0){
+        //ask player if they'd like to fight or run 
+        var promptFight = window.prompt ('Would you like to FIGHT or SKIP to choose');
+    }
+    // if player picks "skip confrim and then stop the loop 
+    if (promptFight === skip || promptFight === "SKIP"){
+        //confirm player wants to skip 
+        var confrimSkip = window .confirm("Are you sure you'd like to quit?");
+
+        //If yes (true), leave fight
+        if (confrimSkip){
+            window.alert(playerName + 'has decided to skip this fight. Goodbye!');
+            //Subtract money from playerMoney for skipping 
+            playerMoney = playerMoney -10;
+            console.log("playerMoney", playerMoney);
+            break;
+        }
+    }
     //alert players that they are starting the round
     window.alert("Welcome to the Robot Gladiators!");
 
